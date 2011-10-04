@@ -44,6 +44,7 @@ setup(
         'psycopg2',
         'django-debug-toolbar',
         'django-transmeta',
+        'django-tagging',
         ],
 )
 
@@ -51,5 +52,6 @@ setup(
 # * Django               - Python-based web development framework
 # * South                - Django application to simplify model SQL migrations
 # * psycopg2             - To work with PostgreSQL
-# * django-debug-toolbar - Add a debug toolbar on views with a lot of helper information
+# * django-debug-toolbar - Add a debug toolbar on views with helper information
 # * django-transmeta     - Allows to create translatable fields
+# * django-tagging       - Gives a TagField to be used in models

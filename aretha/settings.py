@@ -141,6 +141,8 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'south',
     'transmeta',
+    'tagging',
+    'core',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
