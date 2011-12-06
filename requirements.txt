@@ -1,0 +1,8 @@
+# Django
+Django==1.3
+
+# Django Apps
+south
+django-tagging
+django-registration
+django-debug-toolbar

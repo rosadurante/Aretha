@@ -11,27 +11,22 @@ DEBUG_TOOLBAR = DEBUG
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Fabián Sellés Rosa', 'precio@zocolab.es'),
-    ('Pablo Recio Quijano', 'fabian.sellesrosa@alum.uca.es'),
+    ('Fabián Sellés Rosa', 'fabian.sellesrosa@alum.uca.es'),
+    ('Pablo Recio Quijano', 'precio@zocolab.es'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'aretha',                      # Or path to database file if using sqlite3.
-        'USER': 'aretha',                      # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '%s/aretha.db' % BASEDIR,                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-        'OPTIONS': {'autocommit': True},
     }
 }
-
-for key in DATABASES:  # this is needed only if used PostgreSQL
-    if DATABASES[key]['ENGINE'] == 'django.db.backends.postgresql_psycopg2':
-        DATABASES[key]['OPTIONS'] = {'autocommit': True}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -139,10 +134,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'debug_toolbar',
+    'registration',
     'south',
-    'transmeta',
     'tagging',
-    'core',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
